@@ -1,0 +1,16 @@
+*,
+*::after,
+*::before  {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; /* This % will allow user to change font size of page. 62.5% = 10px */
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    box-sizing: border-box;
+}
