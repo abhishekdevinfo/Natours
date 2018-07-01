@@ -1,3 +1,18 @@
+/*
+0 - 600px:          Phone
+601 - 900px:        Tablet portrait
+901 - 1200px:       Tablet landscape
+[1200 - 1800] is where normal style apply
+1800px + :          Big Desktop
+
+$breakpoints arguments choices:
+- phone
+- tab-port
+- tab-land
+- big-desk
+
+1em = 16px
+*/
 @keyframes moveInLeft {
   0% {
     opacity: 0;
@@ -35,8 +50,16 @@
 
 html {
   font-size: 62.5%;
-  /* This % will allow user to change font size of page. 62.5% = 10px */
   text-rendering: optimizeLegibility; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box; }
