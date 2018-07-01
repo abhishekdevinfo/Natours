@@ -22,13 +22,33 @@
         align-items: center;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.2) !important;  
-        transition: all .5s .2s;      
+        transition: all .5s .2s;    
+        
+        @include respond(tab-land) {}
+        
+        @include respond(tab-port) {
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+        }
+        
     }
 
     &__left {
         width: calc(100% / 3);
         // width: 33.33333%;
         // display: table-cell;
+
+        @include respond(tab-land) {}
+        
+        @include respond(tab-port) {
+            width: 100%;
+            margin-bottom: -1rem;
+        }
+
+        @include respond(phone) {
+            display: none;
+        }
+
     }
 
     &__right {
@@ -37,11 +57,27 @@
         // width: 66.66666%;
         // display: table-cell;
         // vertical-align: middle;
+
+        @include respond(tab-land) {}
+        
+        @include respond(tab-port) {
+            width: 100%;
+            text-align: center
+        }
+        
     }
 
     &__img {
         display: block;
         width: 100%;
+
+        @include respond(tab-land) {}
+        
+        @include respond(tab-port) {
+            float: left;
+            width: 50%;
+        }
+        
     }
 
     &__text {
